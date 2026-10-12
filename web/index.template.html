@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 每日情报站 · GitHub 榜</title>
+<link rel="icon" type="image/svg+xml" href="/*__ICON_SVG__*/">
+<link rel="icon" type="image/png" sizes="16x16" href="/*__ICON_PNG16__*/">
+<link rel="icon" type="image/png" sizes="32x32" href="/*__ICON_PNG32__*/">
+<link rel="apple-touch-icon" sizes="180x180" href="/*__ICON_PNG180__*/">
+<meta name="theme-color" content="#0b0f17">
+<meta name="description" content="每天扫一眼的 AI 情报站：39 个来源的 AI 厂商动态与每日速览、X 领军人物与厂商官方账号、GitHub Star 与增长榜，支持筛选、搜索、详情与跳转。">
+<style>/*__CSS__*/</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">/*__BRAND_SVG__*/</div>
+        <div>
+          <h1>AI 每日情报站 &amp; <span class="grad">GitHub 风云榜</span></h1>
+          <p class="sub">AI 厂商动态 · X 领军人物 · 星标与增长榜 &nbsp;|&nbsp; 数据来源：GitHub Search API 与各厂商公开订阅源</p>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <button class="btn sm" id="themeBtn" title="切换主题">🌙 主题</button>
+        <button class="btn sm" id="refreshBtn" title="重新拉取 GitHub 实时数据（未登录限流较严）">🔄 刷新实时数据</button>
+        <button class="btn sm" id="tokenBtn" title="填入 GitHub Token 可提升实时刷新额度">🔑 Token</button>
+        <a class="btn sm primary" href="https://github.com/trending" target="_blank" rel="noopener">GitHub Trending ↗</a>
+      </div>
+    </div>
+
+    <div class="stat-row" id="statRow"></div>
+  </header>
+
+  <nav class="secnav" id="secnav">
+    <a class="secnav-link" href="#digest">🤖 AI 每日速览</a>
+    <a class="secnav-link" href="#github">📊 GitHub 榜单</a>
+    <a class="secnav-link" href="#news">🏢 AI 厂商动态</a>
+    <a class="secnav-link" href="#x">🐦 X 领军人物</a>
+    <a class="secnav-link" href="#glossary">📚 AI 术语表</a>
+    <span class="secnav-spacer"></span>
+    <div class="chips" id="langChips" title="切换中英显示方式（方便对照学习专业词汇）">
+      <button class="chip" data-lang="zh">中</button>
+      <button class="chip active" data-lang="both">中英</button>
+      <button class="chip" data-lang="en">EN</button>
+    </div>
+    <span class="secnav-note" id="navNote"></span>
+  </nav>
+
+  <!-- ============ AI 每日速览 ============ -->
+  <section class="panel" id="digest">
+    <div class="panel-head">
+      <h2>🤖 AI 每日速览</h2>
+      <div class="panel-sub" id="digestSub">正在汇总…</div>
+      <div class="panel-actions">
+        <button class="btn sm" id="digestRefresh" title="尝试从网络重新拉取最新动态（受浏览器跨域限制，失败时会保留快照）">🔄 在线刷新动态</button>
+        <a class="btn sm" href="#news">查看全部动态 →</a>
+      </div>
+    </div>
+    <div class="digest" id="digestList"></div>
+  </section>
+
+  <section class="panel" id="github">
+    <div class="panel-head">
+      <h2>📊 GitHub 项目风云榜</h2>
+      <div class="panel-sub">Star 最多的经典项目 &amp; 增长最快的新星</div>
+    </div>
+
+  <div class="toolbar">
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-tab="stars">⭐ 星光总榜</button>
+      <button class="tab" data-tab="growth">🚀 增长最快</button>
+      <button class="tab" data-tab="momentum">🔥 当下最热</button>
+      <button class="tab" data-tab="newcomers">✨ 潜力新星</button>
+    </div>
+
+    <div class="filters">
+      <label class="search">
+        <span>🔍</span>
+        <input id="search" type="search" placeholder="搜索项目名 / 描述 / 主题标签，例如 rust、agent、awesome">
+      </label>
+
+      <select id="langSel" title="按编程语言筛选"></select>
+
+      <div class="chips" id="windowChips" title="按项目创建时间筛选">
+        <button class="chip active" data-window="all">全部时间</button>
+        <button class="chip" data-window="3y">近 3 年</button>
+        <button class="chip" data-window="1y">近 1 年</button>
+        <button class="chip" data-window="90d">近 90 天</button>
+        <button class="chip" data-window="30d">近 30 天</button>
+        <button class="chip" data-window="7d">近 7 天</button>
+      </div>
+
+      <select id="sortSel" title="排序方式">
+        <option value="stars">按 Star 总数</option>
+        <option value="growth">按日均增星（增速）</option>
+        <option value="momentum">按热度指数</option>
+        <option value="forks">按 Fork 数</option>
+        <option value="pushed">按最近更新</option>
+        <option value="created">按创建时间</option>
+      </select>
+
+      <button class="btn sm" id="viewBtn" title="切换卡片 / 列表视图">▦ 视图</button>
+      <button class="btn sm" id="resetBtn">重置</button>
+    </div>
+  </div>
+
+  <div class="result-line">
+    <div id="resultText">加载中…</div>
+    <div class="legend-note" id="metricNote"></div>
+  </div>
+
+  <main id="grid" class="grid"></main>
+
+  <div style="text-align:center;margin-top:26px">
+    <button class="btn" id="moreBtn" style="display:none">加载更多项目 ↓</button>
+  </div>
+  </section>
+
+  <!-- ============ AI 厂商动态 ============ -->
+  <section class="panel" id="news">
+    <div class="panel-head">
+      <h2>🏢 AI 厂商动态</h2>
+      <div class="panel-sub" id="newsSub">正在加载…</div>
+      <div class="panel-actions">
+        <button class="btn sm" id="newsExport">💾 导出 CSV</button>
+      </div>
+    </div>
+
+    <div class="toolbar toolbar-static">
+      <div class="filters">
+        <div class="chips" id="newsGroupChips">
+          <button class="chip active" data-group="厂商">🏢 厂商官方</button>
+          <button class="chip" data-group="研究">🔬 研究机构</button>
+          <button class="chip" data-group="媒体">📰 科技媒体</button>
+          <button class="chip" data-group="中文">🇨🇳 中文资讯</button>
+          <button class="chip" data-group="通讯">✉️ Newsletter</button>
+          <button class="chip" data-group="社区">💬 社区</button>
+          <button class="chip" data-group="all">🌐 全部来源</button>
+        </div>
+        <select id="newsSourceSel" title="按来源筛选"></select>
+        <select id="newsTagSel" title="按类型筛选">
+          <option value="all">🏷 全部类型</option>
+        </select>
+        <div class="chips" id="newsTimeChips">
+          <button class="chip" data-win="1">近 24 小时</button>
+          <button class="chip" data-win="3">近 3 天</button>
+          <button class="chip active" data-win="7">近 7 天</button>
+          <button class="chip" data-win="30">近 30 天</button>
+          <button class="chip" data-win="0">全部时间</button>
+        </div>
+        <label class="search">
+          <span>🔍</span>
+          <input id="newsSearch" type="search" placeholder="搜索动态标题 / 摘要，例如 Gemini、agent、融资">
+        </label>
+      </div>
+    </div>
+
+    <div class="result-line">
+      <div id="newsCount">…</div>
+      <div class="legend-note">ⓘ 数据来自各厂商官方博客 / 研究机构 / 科技媒体的公开订阅源</div>
+    </div>
+    <div class="newslist" id="newsList"></div>
+    <div style="text-align:center;margin-top:22px">
+      <button class="btn" id="newsMore" style="display:none">加载更多动态 ↓</button>
+    </div>
+  </section>
+
+  <!-- ============ X 领军人物 ============ -->
+  <section class="panel" id="x">
+    <div class="panel-head">
+      <h2>🐦 X 领军人物 &amp; 官方账号</h2>
+      <div class="panel-sub" id="xSub">正在加载…</div>
+      <div class="panel-actions">
+        <div class="chips" id="xKindChips">
+          <button class="chip active" data-kind="all">全部</button>
+          <button class="chip" data-kind="person">👤 领军人物</button>
+          <button class="chip" data-kind="org">🏢 厂商官方</button>
+        </div>
+        <select id="xSortSel" title="排序方式">
+          <option value="followers">按粉丝数</option>
+          <option value="news">按相关报道数</option>
+          <option value="name">按姓名</option>
+        </select>
+        <label class="search" style="flex:0 1 220px">
+          <span>🔍</span>
+          <input id="xSearch" type="search" placeholder="搜索姓名 / 机构">
+        </label>
+      </div>
+    </div>
+    <p class="x-note" id="xNote"></p>
+    <div class="leadergrid" id="leaderList"></div>
+    <div style="text-align:center;margin-top:22px">
+      <button class="btn" id="xMore" style="display:none">加载更多账号 ↓</button>
+    </div>
+  </section>
+
+  <!-- ============ AI 术语表 ============ -->
+  <section class="panel" id="glossary">
+    <div class="panel-head">
+      <h2>📚 AI 术语中英对照</h2>
+      <div class="panel-sub" id="glossSub">正在加载…</div>
+      <div class="panel-actions">
+        <div class="chips" id="glossGroupChips"></div>
+        <label class="search" style="flex:0 1 240px">
+          <span>🔍</span>
+          <input id="glossSearch" type="search" placeholder="搜索术语：agent、量化、RAG…">
+        </label>
+      </div>
+    </div>
+    <p class="x-note">每个术语给出「英文写法 + 中文说法 + 一句话解释」，右侧数字表示它在当前动态库里出现了多少次 —— 点开对应动态即可看到真实语境中的用法。</p>
+    <div class="glossgrid" id="glossList"></div>
+  </section>
+
+  <p class="footnote">
+    数据抓取自 GitHub Search API 与各 AI 厂商 / 研究机构 / 媒体的公开订阅源，生成时间 <span id="genAt">—</span> · 共收录
+    <span id="genCount">0</span> 个项目、<span id="genNews">0</span> 条 AI 动态、<span id="genLeaders">0</span> 位 X 领军人物。<br>
+    “日均增星” = Star 总数 ÷ 项目创建天数；“热度指数”综合增速与新鲜度。GitHub 未提供官方增速接口，
+    增速榜为近似估算，详情页内嵌 <code>star-history.com</code> 真实 Star 曲线可交叉验证。<br>
+    X 未提供公开时间线 API，人物卡片中的资料（头像 / 粉丝数 / 简介）为公开数据快照，
+    推文正文可在卡片内一键载入官方时间线；「相关报道」由动态库按关键词匹配得出。<br>
+    中英对照：默认同时显示中文与英文，可用右上角「中 / 中英 / EN」切换；术语表可help快速积累专业词汇。点击任意卡片查看项目详情、README 摘要与多维度跳转链接。
+  </p>
+</div>
+
+<div class="modal" id="modal">
+  <div class="sheet" id="sheet"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>window.__REPO_DATA__ = /*__DATA__*/;</script>
+<script>/*__JS__*/</script>
+</body>
+</html>

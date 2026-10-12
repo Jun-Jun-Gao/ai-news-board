@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="AI 每日情报站">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4d8dff"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15.04" fill="url(#brand)"/>
+  <path d="M25.60 8.96 Q28.93 20.67 40.64 24.00 Q28.93 27.33 25.60 39.04 Q22.27 27.33 10.56 24.00 Q22.27 20.67 25.60 8.96 Z" fill="#fff"/>
+  <path d="M46.40 37.25 Q48.06 43.14 53.95 44.80 Q48.06 46.46 46.40 52.35 Q44.74 46.46 38.85 44.80 Q44.74 43.14 46.40 37.25 Z" fill="#fff" opacity="0.95"/>
+</svg>
