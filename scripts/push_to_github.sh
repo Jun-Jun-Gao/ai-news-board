@@ -55,12 +55,29 @@ FULL="${OWNER}/${REPO_NAME}"
 if [ "$USE_GH" = "1" ]; then
   if gh repo view "$FULL" >/dev/null 2>&1; then
     echo "仓库已存在：https://github.com/$FULL"
-    git remote get-url origin >/dev/null 2>&1 || git remote add origin "https://github.com/$FULL.git"
-    git push -u origin HEAD
   else
-    echo "正在创建仓库并推送…"
-    gh repo create "$FULL" "--$VISIBILITY" --source=. --remote=origin --push
+    echo "正在创建仓库 $FULL（$VISIBILITY）…"
+    gh repo create "$FULL" "--$VISIBILITY"
   fi
+  git remote get-url origin >/dev/null 2>&1 || git remote add origin "https://github.com/$FULL.git"
+  git remote set-url origin "https://github.com/$FULL.git"
+
+  # 用 GIT_ASKPASS 提供令牌：不写进 .git/config，也不出现在命令行参数里
+  TOKEN="$(gh auth token 2>/dev/null)"
+  ASKPASS="$(mktemp /tmp/gh-askpass.XXXXXX)"
+  cat > "$ASKPASS" <<'EOS'
+#!/bin/sh
+case "$1" in
+  *Username*) echo "x-access-token" ;;
+  *) printf '%s' "$GH_TOKEN" ;;
+esac
+EOS
+  chmod +x "$ASKPASS"
+  echo "正在推送代码…"
+  GH_TOKEN="$TOKEN" GIT_ASKPASS="$ASKPASS" GIT_TERMINAL_PROMPT=0 git push -u origin HEAD
+  RC=$?
+  rm -f "$ASKPASS"
+  [ "$RC" -ne 0 ] && { echo "❌ 推送失败（退出码 $RC）"; exit 1; }
 else
   git remote get-url origin >/dev/null 2>&1 || git remote add origin "git@github.com:$FULL.git"
   git remote set-url origin "git@github.com:$FULL.git"
