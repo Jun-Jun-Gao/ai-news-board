@@ -56,7 +56,7 @@ if [ "$USE_GH" = "1" ]; then
   if gh repo view "$FULL" >/dev/null 2>&1; then
     echo "仓库已存在：https://github.com/$FULL"
   else
-    echo "正在创建仓库 $FULL（$VISIBILITY）…"
+    echo "正在创建仓库 ${FULL}（${VISIBILITY}）…"
     gh repo create "$FULL" "--$VISIBILITY"
   fi
   git remote get-url origin >/dev/null 2>&1 || git remote add origin "https://github.com/$FULL.git"
@@ -77,7 +77,7 @@ EOS
   GH_TOKEN="$TOKEN" GIT_ASKPASS="$ASKPASS" GIT_TERMINAL_PROMPT=0 git push -u origin HEAD
   RC=$?
   rm -f "$ASKPASS"
-  [ "$RC" -ne 0 ] && { echo "❌ 推送失败（退出码 $RC）"; exit 1; }
+  [ "$RC" -ne 0 ] && { echo "❌ 推送失败（退出码 ${RC}）"; exit 1; }
 else
   git remote get-url origin >/dev/null 2>&1 || git remote add origin "git@github.com:$FULL.git"
   git remote set-url origin "git@github.com:$FULL.git"
