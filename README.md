@@ -107,7 +107,7 @@
 重新生成图标（改了配色或形状后）：
 
 ```bash
-/Users/june/.dsh/dsh-runtimes/dsh-primary-runtime/dependencies/python/bin/python3 scripts/make_logo.py
+python3 scripts/make_logo.py          # 需要 Pillow；macOS 自带的中文字体用于渲染品牌图
 python3 scripts/build.py
 ```
 
@@ -262,7 +262,7 @@ node scripts/snapshot.js /tmp
 ```bash
 # 每天 9:00 自动更新，日志写到 /tmp/ai-daily.log
 crontab -e
-0 9 * * * cd /Users/june/Documents/deepseek-harness/default-workspace/github-trends && ./scripts/update_daily.sh >> /tmp/ai-daily.log 2>&1
+0 9 * * * cd /path/to/ai-news-board && ./scripts/update_daily.sh >> /tmp/ai-daily.log 2>&1
 ```
 
 ## 已知限制
