@@ -1,8 +1,6 @@
-# ---- 大体积 / 可再生内容，不纳入版本库 ----
-# cloudflared 等外部二进制（分享脚本首次运行会自动下载）
+# ---- 只排除第三方程序 ----
+# cloudflared 隧道客户端（38MB，是别人的程序；share_public.sh 首次运行会自动下载）
 tools/
-# GitHub Search API 原始返回（collect.sh 可重新抓取）
-data/raw/
 
 # ---- 系统与编辑器 ----
 .DS_Store

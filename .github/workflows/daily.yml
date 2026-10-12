@@ -11,6 +11,11 @@ on:
   schedule:
     - cron: "30 1 * * *"
   workflow_dispatch:
+    inputs:
+      commit_data:
+        description: "是否把更新后的数据提交回仓库（默认否：只发布页面，避免仓库每天增长约 9MB）"
+        type: boolean
+        default: false
 
 permissions:
   contents: write      # 提交更新后的数据
@@ -60,7 +65,10 @@ jobs:
           python scripts/test_tweet_parse.py
           node scripts/smoke.js
 
-      - name: 提交更新
+      # 默认不提交：每日发布只需要产物，提交会把 9MB 数据写进历史，一年膨胀数 GB。
+      # 想给仓库留一份数据快照时，手动运行并勾选 commit_data。
+      - name: 提交更新（仅在手动勾选时执行）
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.commit_data }}
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
