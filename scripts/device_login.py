@@ -16,8 +16,9 @@ import json, os, sys, time, urllib.parse, urllib.request, urllib.error
 
 # GitHub CLI 的公开 client id（设备码流程需要，不是密钥；授权页会显示为 GitHub CLI）
 CLIENT_ID = "178c6fc778ccc68e1d6a"
-# repo=建仓库/推送，workflow=能推送 .github/workflows 下的文件，read:org=读取组织信息
-SCOPES = "repo workflow read:org"
+# 默认：repo=建仓库/推送，workflow=能推送 .github/workflows 下的文件，read:org=读取组织信息
+# 可用环境变量 GH_SCOPES 追加权限（例如删除仓库需要 delete_repo）
+SCOPES = os.environ.get("GH_SCOPES", "repo workflow read:org")
 UA = {"User-Agent": "gh-device-flow/1.0", "Accept": "application/json"}
 
 

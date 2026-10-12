@@ -9,7 +9,15 @@ const vm = require('vm');
 
 const ROOT = path.dirname(__dirname);
 const OUT = process.argv[2] || '/tmp';
-const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+const WIDTH = Number(process.env.SNAPSHOT_WIDTH || 820);      // 预览页宽度（桌面截图用 1600）
+const COMPACT = process.env.SNAPSHOT_COMPACT === '1';         // 精简模式：限制卡片数量
+const N_CARDS = Number(process.env.SNAP_CARDS || 6);          // GitHub 项目卡数量
+const N_DIGEST = Number(process.env.SNAP_DIGEST || 6);        // 速览卡数量
+const N_NEWS = Number(process.env.SNAP_NEWS || 13);           // 动态列表子元素数量
+const N_LEADERS = Number(process.env.SNAP_LEADERS || 7);      // 人物卡数量
+const N_GLOSS = Number(process.env.SNAP_GLOSS || 10);         // 术语卡数量
+const INPUT = process.env.SNAPSHOT_INPUT || path.join(ROOT, 'index.html');
+const html = fs.readFileSync(INPUT, 'utf8');
 const CSS = html.slice(html.indexOf('<style>') + 7, html.indexOf('</style>'));
 
 const mk = 'window.__REPO_DATA__ = ';
@@ -55,7 +63,7 @@ vm.runInContext(fs.readFileSync(path.join(ROOT, 'web', 'app.js'), 'utf8'), sb);
 
 /* ---- capture rendered fragments ---- */
 const grid = get('#grid');
-const cards = grid.children.slice(0, 6).map((c) => '<article class="card">' + c.innerHTML + '</article>').join('');
+const cards = grid.children.slice(0, N_CARDS).map((c) => '<article class="card">' + c.innerHTML + '</article>').join('');
 get('#sheet').innerHTML = '';
 grid.children[1].listeners.click.forEach((f) => f({ target: { closest: () => null }, preventDefault() {} }));
 const sheet = get('#sheet').innerHTML;
@@ -64,12 +72,22 @@ const newsHtml = get('#newsList').innerHTML;
 const leaderHtml = get('#leaderList').innerHTML;
 const glossHtml = get('#glossList').innerHTML;
 
+const compactCss = COMPACT ? `
+/* 精简模式：每块只保留固定数量，截图更紧凑 */
+.digest > *:nth-child(n+${N_DIGEST + 1}) { display: none; }
+.grid > *:nth-child(n+${N_CARDS + 1}) { display: none; }
+.newslist > *:nth-child(n+${N_NEWS + 1}) { display: none; }
+.leadergrid > *:nth-child(n+${N_LEADERS + 1}) { display: none; }
+.glossgrid > *:nth-child(n+${N_GLOSS + 1}) { display: none; }
+` : '';
+
 const shell = (title, body) => `<!DOCTYPE html><html lang="zh-CN" data-theme="${get('<html>').attrs['data-theme']}">
 <head><meta charset="utf-8"><title>${title}</title><style>${CSS}
-/* 预览专用：强制桌面宽度，避免缩略图渲染器使用窄视口 */
-html, body { width: 820px; }  /* 贴合缩略图渲染器的窄视口，避免被裁切 */
+/* 预览专用：固定宽度，便于用无头浏览器按桌面尺寸截图 */
+html, body { width: ${WIDTH}px; }
+${compactCss}
 </style></head>
-<body><div class="wrap">${body}</div></body></html>`;
+<body><div class="wrap">${body}</div>\n<div id="__endmark__" style="height:8px;background:#ff00ff"></div></body></html>`;
 
 const toolbar = `<div class="toolbar">
   <div class="tabs">${['⭐ 星光总榜', '🚀 增长最快', '🔥 当下最热', '✨ 潜力新星'].map((t, i) =>
@@ -128,6 +146,8 @@ const glossSection = `<section class="panel" id="glossary">
   <p class="x-note">每个术语给出「英文写法 + 中文说法 + 一句话解释」，右侧数字表示它在当前动态库里出现了多少次。</p>
   <div class="glossgrid">${glossHtml}</div></section>`;
 
+const heroPage = shell('预览 · 顶部', hero + secnav + digestSection);
+const githubPage = shell('预览 · GitHub 榜单', githubSection);
 const main = shell('预览 · 总览', hero + secnav + digestSection + githubSection + newsSection + xSection + glossSection);
 const newsPage = shell('预览 · AI 动态', hero.split('</div></header>')[0] + '</div></header>' + newsSection);
 const xPage = shell('预览 · X 人物', xSection);
@@ -135,10 +155,12 @@ const modal = shell('预览 · 详情', `<div class="modal open" style="position
   <div class="sheet">${sheet}</div></div>`);
 
 fs.writeFileSync(path.join(OUT, 'preview-gloss.html'), shell('预览 · 术语表', glossSection));
+fs.writeFileSync(path.join(OUT, 'preview-hero.html'), heroPage);
+fs.writeFileSync(path.join(OUT, 'preview-github.html'), githubPage);
 fs.writeFileSync(path.join(OUT, 'preview-main.html'), main);
 fs.writeFileSync(path.join(OUT, 'preview-news.html'), newsPage);
 fs.writeFileSync(path.join(OUT, 'preview-x.html'), xPage);
 fs.writeFileSync(path.join(OUT, 'preview-modal.html'), modal);
-for (const f of ['preview-main', 'preview-news', 'preview-x', 'preview-gloss', 'preview-modal']) {
+for (const f of ['preview-hero', 'preview-github', 'preview-main', 'preview-news', 'preview-x', 'preview-gloss', 'preview-modal']) {
   console.log(`wrote ${path.join(OUT, f + '.html')} (${(fs.statSync(path.join(OUT, f + '.html')).size / 1024).toFixed(0)} KB)`);
 }
