@@ -329,6 +329,13 @@ def collect(leader):
             row["profile_ok"] = True
             row["stale_profile"] = True
             err = "本次抓取失败，沿用上次资料"
+    # 简介没变化时保留上次的中文翻译，避免每次抓取都丢掉 bio_zh
+    prev = PREV.get(handle) or {}
+    if row.get("bio") and prev.get("bio") == row.get("bio") and prev.get("bio_zh"):
+        row["bio_zh"] = prev["bio_zh"]
+        if prev.get("bio_zh_stale"):
+            row["bio_zh_stale"] = prev["bio_zh_stale"]
+
     tweets, why = try_timeline(handle)
     row["tweets"] = tweets or []
     row["tweets_source"] = "snapshot" if tweets else ""

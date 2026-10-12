@@ -36,7 +36,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "http://Terafab.AI"
   },
   {
    "handle": "sundarpichai",
@@ -63,7 +64,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "谷歌和 Alphabet 首席执行官"
   },
   {
    "handle": "satyanadella",
@@ -90,7 +92,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "微软董事长兼首席执行官"
   },
   {
    "handle": "sama",
@@ -116,7 +119,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "OpenAI 的使命是确保 AGI 造福全人类"
   },
   {
    "handle": "OpenAI",
@@ -142,7 +146,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "OpenAI’s mission is to ensure that artificial general intelligence benefits all of humanity.我们正在招聘：http://openai.com/jobs"
   },
   {
    "handle": "karpathy",
@@ -194,7 +199,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "NVIDIA 的官方手柄。 Blog: https://blogs.nvidia.com Support: http://nvda.ws/2ei5pio All our social media: http://nvda.ws/2wmlfGB"
   },
   {
    "handle": "demishassabis",
@@ -221,7 +227,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "诺贝尔奖获得者。联合创始人兼主席@GoogleDeepMind； Alphabet 首席科学家。创始人兼首席执行官@IsomorphicLabs。建设未来..."
   },
   {
    "handle": "AndrewYNg",
@@ -248,7 +255,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "Coursera 联合创始人；斯坦福大学计算机科学兼职教师。前百度人工智能事业部/谷歌大脑负责人。 #ai #machinelearning、#deeplearning #MOOCs"
   },
   {
    "handle": "AnthropicAI",
@@ -273,7 +281,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "我们是一家人工智能安全和研究公司，致力于构建可靠、可解释和可操纵的人工智能系统。 Talk to our AI assistant @claudeai on https://claude.ai."
   },
   {
    "handle": "GoogleDeepMind",
@@ -299,7 +308,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "@Google 的机房。 Building AI safely and responsibly to solve the world’s most complex problems.加入我们：https://deepmind.google/careers/"
   },
   {
    "handle": "ylecun",
@@ -326,7 +336,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "AMI 实验室创始人/主席；纽约大学教授； 224 Ventures 合伙人；前首席人工智能科学家，Meta。 Researcher in AI, ML, Robotics, etc. ACM Turing Award Laureate."
   },
   {
    "handle": "mustafasuleyman",
@@ -353,7 +364,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "首席执行官，@MicrosoftAI |作者：即将到来的浪潮 | Past: Co-founder, @InflectionAI & @GoogleDeepMind"
   },
   {
    "handle": "AravSrinivas",
@@ -378,7 +390,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "联合创始人兼首席执行官@perplexity_ai"
   },
   {
    "handle": "deepseek_ai",
@@ -403,7 +416,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "带着好奇心揭开 AGI 的神秘面纱。以长期主义回答基本问题。"
   },
   {
    "handle": "drfeifei",
@@ -430,7 +444,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "联合创始人/首席执行官@theworldlabs，教授（CS @Stanford），联合主任@StanfordHAI，#AI #SpatialIntelligence #GenAI #computervision #robotics #AI-healthcare"
   },
   {
    "handle": "AIatMeta",
@@ -456,7 +471,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "我们正在构建个人超级智能的未来，以帮助人们在生活中创造、联系和实现更多目标。"
   },
   {
    "handle": "DarioAmodei",
@@ -483,7 +499,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "人类首席执行官。 http://darioamodei.com"
   },
   {
    "handle": "huggingface",
@@ -508,7 +525,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "人工智能社区建设未来。 http://hf.co/careers"
   },
   {
    "handle": "fchollet",
@@ -534,7 +552,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "联合创始人@ndea。联合创始人@arcprize。 Keras 和 ARC-AGI 的创建者。 《Python 深度学习》一书的作者。"
   },
   {
    "handle": "ClementDelangue",
@@ -559,7 +578,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "联合创始人兼首席执行官 @HuggingFace 🤗，AI 构建者的开放协作平台"
   },
   {
    "handle": "rowancheung",
@@ -584,7 +604,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "Founder of the world’s most read daily AI newsletter @therundownai.分享人工智能领域的最新进展。"
   },
   {
    "handle": "DrJimFan",
@@ -612,7 +633,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "NVIDIA 机器人技术总监兼杰出科学家。 GEAR 实验室联合负责人。一次解决一台电机的物理 AGI 问题。斯坦福大学博士OpenAI 的第一个实习生。"
   },
   {
    "handle": "JeffDean",
@@ -638,7 +660,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "Discovery Loop 联合创始人兼首席执行官。谷歌前首席科学家。 Helped build many Google products, TPUs, Gemini, TensorFlow, MapReduce, Bigtable, ..."
   },
   {
    "handle": "perplexity_ai",
@@ -662,7 +685,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "好奇心改变一切。 Download our free app on iOS, Mac, Windows, and Android."
   },
   {
    "handle": "cursor_ai",
@@ -687,7 +711,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "用于构建雄心勃勃的软件的编码智能体"
   },
   {
    "handle": "emollick",
@@ -713,7 +738,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "@沃顿商学院教授研究人工智能。 New book, Co-Existence, coming October 20. Preorder here: https://co-existence.ai/ Substack: https://www.oneusefulthing.org/"
   },
   {
    "handle": "Kimi_Moonshot",
@@ -739,7 +765,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "由Moonshot AI打造，让每个人都成为超人。PR ： globalpr@moonshot.ai DC ： https://discord.gg/9SY8CenBNh"
   },
   {
    "handle": "Alibaba_Qwen",
@@ -765,7 +792,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "AGI 的开放基础模型。"
   },
   {
    "handle": "simonw",
@@ -790,7 +818,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "创建者@datasetteproj，共同创建者Django。 PSF 板。和@natbat 一起出去玩。他/他。乳齿象：https://fedi.simonwillison.net/@simon Bsky：http://simonwillison.net"
   },
   {
    "handle": "MistralAI",
@@ -814,7 +843,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "前沿人工智能在你手中。 Get work done with @MistralVibe at http://mistr.al/vibe."
   },
   {
    "handle": "swyx",
@@ -840,7 +870,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "以意图、强度、正直和疯狂实现抱负。隶属关系： - @smol_ai - @dxtipshq - @cognition - @aidotengineer - @latentspacepod"
   },
   {
    "handle": "ollama",
@@ -864,7 +895,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "https://llama.com"
   },
   {
    "handle": "alexalbert__",
@@ -889,7 +921,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "研究@AnthropicAI。意见是我自己的！"
   },
   {
    "handle": "MiniMax_AI",
@@ -915,7 +948,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "代码：@MiniMaxAgent MiniMax 设计：@Hailuo_AI API：http://platform.minimax.io Token计划：https://platform.minimax.io/subscribe/token-plan"
   },
   {
    "handle": "arthurmensch",
@@ -941,7 +975,8 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": ""
+   "error": "",
+   "bio_zh": "联合创始人兼首席执行官@MistralAI"
   }
  ]
 }
