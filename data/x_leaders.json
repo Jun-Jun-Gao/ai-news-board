@@ -1,7 +1,8 @@
 {
- "generated_at": "2026-10-12T04:55:21.630303Z",
+ "generated_at": "2026-10-12T10:27:54.949029Z",
  "count": 36,
  "profile_ok": 36,
+ "stale_profiles": 0,
  "with_tweets": 0,
  "persons": 22,
  "orgs": 14,
@@ -24,9 +25,9 @@
    "avatar": "https://pbs.twimg.com/profile_images/2103567689515954176/aR-Kjpp4_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/44196397/1774145451",
    "bio": "http://Terafab.AI",
-   "followers": 241507564,
+   "followers": 241511055,
    "following": 1420,
-   "tweets_count": 109994,
+   "tweets_count": 109998,
    "joined": "Tue Jun 02 20:12:29 +0000 2009",
    "location": "",
    "url": "https://x.com/elonmusk",
@@ -35,8 +36,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "http://Terafab.AI"
+   "error": ""
   },
   {
    "handle": "sundarpichai",
@@ -52,7 +52,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/2051799620062429184/AL8CoAUG_200x200.jpg",
    "banner": "",
    "bio": "CEO, Google and Alphabet",
-   "followers": 11893898,
+   "followers": 11897606,
    "following": 199,
    "tweets_count": 2793,
    "joined": "Wed Mar 12 05:51:53 +0000 2008",
@@ -63,8 +63,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "谷歌和 Alphabet 首席执行官"
+   "error": ""
   },
   {
    "handle": "satyanadella",
@@ -80,7 +79,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/1221837516816306177/_Ld4un5A_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/20571756/1781028621",
    "bio": "Chairman and CEO at Microsoft",
-   "followers": 9632392,
+   "followers": 9636499,
    "following": 320,
    "tweets_count": 2394,
    "joined": "Wed Feb 11 04:45:34 +0000 2009",
@@ -91,8 +90,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "微软董事长兼首席执行官"
+   "error": ""
   },
   {
    "handle": "sama",
@@ -107,7 +105,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/2046764873200394240/r7BxVezs_200x200.jpg",
    "banner": "",
    "bio": "The mission of OpenAI is to ensure that AGI benefits all of humanity",
-   "followers": 6367543,
+   "followers": 6368588,
    "following": 1034,
    "tweets_count": 7999,
    "joined": "Sun Jul 16 22:01:55 +0000 2006",
@@ -118,8 +116,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "OpenAI 的使命是确保 AGI 造福全人类"
+   "error": ""
   },
   {
    "handle": "OpenAI",
@@ -134,7 +131,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/1885410181409820672/ztsaR0JW_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/4398626122/1777662919",
    "bio": "OpenAI’s mission is to ensure that artificial general intelligence benefits all of humanity. We’re hiring: http://openai.com/jobs",
-   "followers": 5426536,
+   "followers": 5427087,
    "following": 4,
    "tweets_count": 2179,
    "joined": "Sun Dec 06 22:51:08 +0000 2015",
@@ -145,8 +142,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "OpenAI’s mission is to ensure that artificial general intelligence benefits all of humanity.我们正在招聘：http://openai.com/jobs"
+   "error": ""
   },
   {
    "handle": "karpathy",
@@ -160,7 +156,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/1296667294148382721/9Pr6XrPB_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/33836629/1407117611",
    "bio": "",
-   "followers": 4345159,
+   "followers": 4348130,
    "following": 1142,
    "tweets_count": 10161,
    "joined": "Tue Apr 21 06:49:15 +0000 2009",
@@ -187,7 +183,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/1828904711124078593/SRvCZSfQ_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/61559439/1749760220",
    "bio": "The official handle for NVIDIA. Blog: https://blogs.nvidia.com Support: http://nvda.ws/2ei5pio All our social media: http://nvda.ws/2wmlfGB",
-   "followers": 2676489,
+   "followers": 2676578,
    "following": 47,
    "tweets_count": 14572,
    "joined": "Thu Jul 30 18:25:14 +0000 2009",
@@ -198,8 +194,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "NVIDIA 的官方手柄。 Blog: https://blogs.nvidia.com Support: http://nvda.ws/2ei5pio All our social media: http://nvda.ws/2wmlfGB"
+   "error": ""
   },
   {
    "handle": "demishassabis",
@@ -215,7 +210,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/1990472620614053888/xrAu0wQL_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/1482581556/1453748225",
    "bio": "Nobel Laureate. Co-Founder & Chair @GoogleDeepMind; Chief Scientist of Alphabet. Founder & CEO @IsomorphicLabs. Building the future...",
-   "followers": 1947399,
+   "followers": 1948124,
    "following": 179,
    "tweets_count": 3236,
    "joined": "Tue Jun 04 15:50:11 +0000 2013",
@@ -226,8 +221,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "诺贝尔奖获得者。联合创始人兼主席@GoogleDeepMind； Alphabet 首席科学家。创始人兼首席执行官@IsomorphicLabs。建设未来..."
+   "error": ""
   },
   {
    "handle": "AndrewYNg",
@@ -243,7 +237,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/733174243714682880/oyG30NEH_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/216939636/1483126470",
    "bio": "Co-Founder of Coursera; Stanford CS adjunct faculty. Former head of Baidu AI Group/Google Brain. #ai #machinelearning, #deeplearning #MOOCs",
-   "followers": 1923314,
+   "followers": 1923659,
    "following": 1117,
    "tweets_count": 2030,
    "joined": "Thu Nov 18 03:39:11 +0000 2010",
@@ -254,8 +248,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "Coursera 联合创始人；斯坦福大学计算机科学兼职教师。前百度人工智能事业部/谷歌大脑负责人。 #ai #machinelearning、#deeplearning #MOOCs"
+   "error": ""
   },
   {
    "handle": "AnthropicAI",
@@ -269,7 +262,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/1798110641414443008/XP8gyBaY_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/1353836358901501952/1719228429",
    "bio": "We're an AI safety and research company that builds reliable, interpretable, and steerable AI systems. Talk to our AI assistant @claudeai on https://claude.ai.",
-   "followers": 1789339,
+   "followers": 1789748,
    "following": 2,
    "tweets_count": 1716,
    "joined": "Mon Jan 25 22:45:28 +0000 2021",
@@ -280,8 +273,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "我们是一家人工智能安全和研究公司，致力于构建可靠、可解释和可操纵的人工智能系统。 Talk to our AI assistant @claudeai on https://claude.ai."
+   "error": ""
   },
   {
    "handle": "GoogleDeepMind",
@@ -296,7 +288,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/1695024885070737408/-M-HSH5P_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/4783690002/1782818125",
    "bio": "The engine room of @Google. Building AI safely and responsibly to solve the world’s most complex problems. Join us: https://deepmind.google/careers/",
-   "followers": 1566179,
+   "followers": 1566343,
    "following": 267,
    "tweets_count": 4575,
    "joined": "Tue Jan 19 13:46:08 +0000 2016",
@@ -307,8 +299,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "@Google 的机房。 Building AI safely and responsibly to solve the world’s most complex problems.加入我们：https://deepmind.google/careers/"
+   "error": ""
   },
   {
    "handle": "ylecun",
@@ -324,9 +315,9 @@
    "avatar": "https://pbs.twimg.com/profile_images/1483577865056702469/rWA-3_T7_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/48008938/1642547502",
    "bio": "Founder/Chair, AMI Labs; Professor, NYU; Partner, 224 Ventures; Ex-Chief AI Scientist, Meta. Researcher in AI, ML, Robotics, etc. ACM Turing Award Laureate.",
-   "followers": 1323587,
+   "followers": 1323736,
    "following": 800,
-   "tweets_count": 27741,
+   "tweets_count": 27742,
    "joined": "Wed Jun 17 16:05:51 +0000 2009",
    "location": "New York",
    "url": "https://x.com/ylecun",
@@ -335,8 +326,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "AMI 实验室创始人/主席；纽约大学教授； 224 Ventures 合伙人；前首席人工智能科学家，Meta。 Researcher in AI, ML, Robotics, etc. ACM Turing Award Laureate."
+   "error": ""
   },
   {
    "handle": "mustafasuleyman",
@@ -352,7 +342,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/1927407622602276864/c_5uOZij_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/2314443930/1760546906",
    "bio": "CEO, @MicrosoftAI | Author: The Coming Wave | Past: Co-founder, @InflectionAI & @GoogleDeepMind",
-   "followers": 1167233,
+   "followers": 1167801,
    "following": 177,
    "tweets_count": 2575,
    "joined": "Mon Jan 27 22:49:49 +0000 2014",
@@ -363,8 +353,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "首席执行官，@MicrosoftAI |作者：即将到来的浪潮 | Past: Co-founder, @InflectionAI & @GoogleDeepMind"
+   "error": ""
   },
   {
    "handle": "AravSrinivas",
@@ -378,7 +367,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/2099903483457703936/U-W6QQk__200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/759894532649545732/1772509049",
    "bio": "cofounder and ceo @perplexity_ai",
-   "followers": 1166140,
+   "followers": 1166548,
    "following": 1607,
    "tweets_count": 9124,
    "joined": "Sun Jul 31 23:32:29 +0000 2016",
@@ -389,8 +378,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "联合创始人兼首席执行官@perplexity_ai"
+   "error": ""
   },
   {
    "handle": "deepseek_ai",
@@ -404,7 +392,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/1717417613775757312/Uk1zNOj4_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/1714580962569588736/1698208997",
    "bio": "Unravel the mystery of AGI with curiosity. Answer the essential question with long-termism.",
-   "followers": 1140928,
+   "followers": 1141000,
    "following": 1,
    "tweets_count": 184,
    "joined": "Wed Oct 18 09:55:45 +0000 2023",
@@ -415,8 +403,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "带着好奇心揭开 AGI 的神秘面纱。以长期主义回答基本问题。"
+   "error": ""
   },
   {
    "handle": "drfeifei",
@@ -432,7 +419,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/841385099799085056/R1iX4QGX_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/130745589/1691282908",
    "bio": "Cofounder/CEO @theworldlabs, Prof (CS @Stanford), Co-Director @StanfordHAI, #AI #SpatialIntelligence #GenAI #computervision #robotics #AI-healthcare",
-   "followers": 1091538,
+   "followers": 1091706,
    "following": 1196,
    "tweets_count": 3120,
    "joined": "Thu Apr 08 05:16:30 +0000 2010",
@@ -443,8 +430,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "联合创始人/首席执行官@theworldlabs，教授（CS @Stanford），联合主任@StanfordHAI，#AI #SpatialIntelligence #GenAI #computervision #robotics #AI-healthcare"
+   "error": ""
   },
   {
    "handle": "AIatMeta",
@@ -459,7 +445,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/2102933421458665472/o_KTIjw3_200x200.png",
    "banner": "https://pbs.twimg.com/profile_banners/1034844617261248512/1790213330",
    "bio": "We're building the future of personal superintelligence to help people create, connect, and achieve more in life.",
-   "followers": 862644,
+   "followers": 862694,
    "following": 367,
    "tweets_count": 2782,
    "joined": "Wed Aug 29 16:45:58 +0000 2018",
@@ -470,8 +456,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "我们正在构建个人超级智能的未来，以帮助人们在生活中创造、联系和实现更多目标。"
+   "error": ""
   },
   {
    "handle": "DarioAmodei",
@@ -487,7 +472,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/2015835742577012736/uOwdzrEz_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/874126509245476864/1769457252",
    "bio": "Anthropic CEO. http://darioamodei.com",
-   "followers": 845794,
+   "followers": 846082,
    "following": 0,
    "tweets_count": 25,
    "joined": "Mon Jun 12 04:49:35 +0000 2017",
@@ -498,8 +483,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "人类首席执行官。 http://darioamodei.com"
+   "error": ""
   },
   {
    "handle": "huggingface",
@@ -513,7 +497,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/1991559933473497089/mbrRS49P_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/778764142412984320/1731533786",
    "bio": "The AI community building the future. http://hf.co/careers",
-   "followers": 815160,
+   "followers": 815326,
    "following": 227,
    "tweets_count": 14329,
    "joined": "Thu Sep 22 01:13:35 +0000 2016",
@@ -524,8 +508,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "人工智能社区建设未来。 http://hf.co/careers"
+   "error": ""
   },
   {
    "handle": "fchollet",
@@ -540,9 +523,9 @@
    "avatar": "https://pbs.twimg.com/profile_images/2006806326140350470/Kd5oZv-f_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/68746721/1463719109",
    "bio": "Co-founder @ndea. Co-founder @arcprize. Creator of Keras and ARC-AGI. Author of 'Deep Learning with Python'.",
-   "followers": 742440,
+   "followers": 742527,
    "following": 830,
-   "tweets_count": 25533,
+   "tweets_count": 25534,
    "joined": "Tue Aug 25 17:09:25 +0000 2009",
    "location": "United States",
    "url": "https://x.com/fchollet",
@@ -551,8 +534,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "联合创始人@ndea。联合创始人@arcprize。 Keras 和 ARC-AGI 的创建者。 《Python 深度学习》一书的作者。"
+   "error": ""
   },
   {
    "handle": "ClementDelangue",
@@ -566,9 +548,9 @@
    "avatar": "https://pbs.twimg.com/profile_images/1100512198139498497/utHSJ4st_200x200.png",
    "banner": "https://pbs.twimg.com/profile_banners/186420551/1731168567",
    "bio": "Co-founder & CEO @HuggingFace 🤗, the open and collaborative platform for AI builders",
-   "followers": 725673,
-   "following": 4919,
-   "tweets_count": 31476,
+   "followers": 726023,
+   "following": 4920,
+   "tweets_count": 31483,
    "joined": "Fri Sep 03 12:25:12 +0000 2010",
    "location": "Miami / New York / Paris",
    "url": "https://x.com/ClementDelangue",
@@ -577,8 +559,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "联合创始人兼首席执行官 @HuggingFace 🤗，AI 构建者的开放协作平台"
+   "error": ""
   },
   {
    "handle": "rowancheung",
@@ -603,8 +584,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "Founder of the world’s most read daily AI newsletter @therundownai.分享人工智能领域的最新进展。"
+   "error": ""
   },
   {
    "handle": "DrJimFan",
@@ -621,8 +601,8 @@
    "avatar": "https://pbs.twimg.com/profile_images/1554922493101559808/SYSZhbcd_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/1007413134/1672408318",
    "bio": "NVIDIA Director of Robotics & Distinguished Scientist. Co-Lead of GEAR lab. Solving Physical AGI, one motor at a time. Stanford Ph.D. OpenAI's 1st intern.",
-   "followers": 597499,
-   "following": 3146,
+   "followers": 597612,
+   "following": 3145,
    "tweets_count": 4236,
    "joined": "Wed Dec 12 22:11:27 +0000 2012",
    "location": "Views my own. Contact →",
@@ -632,8 +612,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "NVIDIA 机器人技术总监兼杰出科学家。 GEAR 实验室联合负责人。一次解决一台电机的物理 AGI 问题。斯坦福大学博士OpenAI 的第一个实习生。"
+   "error": ""
   },
   {
    "handle": "JeffDean",
@@ -648,7 +627,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/935325968280907776/AcBo6zJc_200x200.jpg",
    "banner": "",
    "bio": "Co-founder & CEO of Discovery Loop. Former Chief Scientist, Google. Helped build many Google products, TPUs, Gemini, TensorFlow, MapReduce, Bigtable, ...",
-   "followers": 529682,
+   "followers": 529709,
    "following": 6446,
    "tweets_count": 9546,
    "joined": "Fri Sep 22 18:32:35 +0000 2017",
@@ -659,8 +638,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "Discovery Loop 联合创始人兼首席执行官。谷歌前首席科学家。 Helped build many Google products, TPUs, Gemini, TensorFlow, MapReduce, Bigtable, ..."
+   "error": ""
   },
   {
    "handle": "perplexity_ai",
@@ -673,7 +651,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/2009310641165660160/XArF3_Ib_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/1599587232175849472/1772040163",
    "bio": "Curiosity changes everything. Download our free app on iOS, Mac, Windows, and Android.",
-   "followers": 507626,
+   "followers": 507623,
    "following": 68,
    "tweets_count": 1266,
    "joined": "Mon Dec 05 02:12:13 +0000 2022",
@@ -684,8 +662,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "好奇心改变一切。 Download our free app on iOS, Mac, Windows, and Android."
+   "error": ""
   },
   {
    "handle": "cursor_ai",
@@ -699,7 +676,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/1970182748146180096/dhZeXi_X_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/1695890961094909952/1780180766",
    "bio": "Coding agent for building ambitious software",
-   "followers": 487464,
+   "followers": 487503,
    "following": 38,
    "tweets_count": 577,
    "joined": "Sun Aug 27 20:08:16 +0000 2023",
@@ -710,8 +687,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "用于构建雄心勃勃的软件的编码智能体"
+   "error": ""
   },
   {
    "handle": "emollick",
@@ -726,7 +702,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/1601382188712398850/3AAOlqrX_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/39125788/1784742782",
    "bio": "Professor @Wharton studying AI. New book, Co-Existence, coming October 20. Preorder here: https://co-existence.ai/ Substack: https://www.oneusefulthing.org/",
-   "followers": 401953,
+   "followers": 402095,
    "following": 593,
    "tweets_count": 37148,
    "joined": "Sun May 10 22:33:52 +0000 2009",
@@ -737,8 +713,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "@沃顿商学院教授研究人工智能。 New book, Co-Existence, coming October 20. Preorder here: https://co-existence.ai/ Substack: https://www.oneusefulthing.org/"
+   "error": ""
   },
   {
    "handle": "Kimi_Moonshot",
@@ -753,7 +728,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/2086719038798102529/diJGKpOE_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/1863959670169501696/1786342668",
    "bio": "Built by Moonshot AI to empower everyone to be superhuman. PR: globalpr@moonshot.ai DC: https://discord.gg/9SY8CenBNh",
-   "followers": 365393,
+   "followers": 365402,
    "following": 137,
    "tweets_count": 455,
    "joined": "Tue Dec 03 14:54:14 +0000 2024",
@@ -764,8 +739,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "由Moonshot AI打造，让每个人都成为超人。PR ： globalpr@moonshot.ai DC ： https://discord.gg/9SY8CenBNh"
+   "error": ""
   },
   {
    "handle": "Alibaba_Qwen",
@@ -780,7 +754,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/2064231947149377536/Ab70PxT5_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/1753339277386342400/1780986224",
    "bio": "Open foundation models for AGI.",
-   "followers": 295507,
+   "followers": 295565,
    "following": 3,
    "tweets_count": 1080,
    "joined": "Fri Feb 02 08:47:32 +0000 2024",
@@ -791,8 +765,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "AGI 的开放基础模型。"
+   "error": ""
   },
   {
    "handle": "simonw",
@@ -806,7 +779,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/378800000261649705/be9cc55e64014e6d7663c50d7cb9fc75_200x200.jpeg",
    "banner": "https://pbs.twimg.com/profile_banners/12497/1642751752",
    "bio": "Creator @datasetteproj, co-creator Django. PSF board. Hangs out with @natbat. He/Him. Mastodon: https://fedi.simonwillison.net/@simon Bsky: http://simonwillison.net",
-   "followers": 237223,
+   "followers": 237352,
    "following": 5670,
    "tweets_count": 61558,
    "joined": "Wed Nov 15 13:18:50 +0000 2006",
@@ -817,8 +790,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "创建者@datasetteproj，共同创建者Django。 PSF 板。和@natbat 一起出去玩。他/他。乳齿象：https://fedi.simonwillison.net/@simon Bsky：http://simonwillison.net"
+   "error": ""
   },
   {
    "handle": "MistralAI",
@@ -831,7 +803,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/1996905418065375232/mzwynOLB_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/1667249535519805451/1764934328",
    "bio": "Frontier AI in your hands. Get work done with @MistralVibe at http://mistr.al/vibe.",
-   "followers": 222437,
+   "followers": 222479,
    "following": 2,
    "tweets_count": 190,
    "joined": "Fri Jun 09 19:17:25 +0000 2023",
@@ -842,8 +814,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "前沿人工智能在你手中。 Get work done with @MistralVibe at http://mistr.al/vibe."
+   "error": ""
   },
   {
    "handle": "swyx",
@@ -858,9 +829,9 @@
    "avatar": "https://pbs.twimg.com/profile_images/2073162797354217472/hNny55eF_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/33521530/1782712981",
    "bio": "achieve ambition with intentionality, intensity, integrity & insanity. affiliations: - @smol_ai - @dxtipshq - @cognition - @aidotengineer - @latentspacepod",
-   "followers": 201711,
+   "followers": 201777,
    "following": 3939,
-   "tweets_count": 78438,
+   "tweets_count": 78439,
    "joined": "Mon Apr 20 14:04:41 +0000 2009",
    "location": "san francisco / singapore",
    "url": "https://x.com/swyx",
@@ -869,8 +840,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "以意图、强度、正直和疯狂实现抱负。隶属关系： - @smol_ai - @dxtipshq - @cognition - @aidotengineer - @latentspacepod"
+   "error": ""
   },
   {
    "handle": "ollama",
@@ -883,9 +853,9 @@
    "avatar": "https://pbs.twimg.com/profile_images/2045273960666071040/rCjCIwiC_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/1688410127378829312/1771893027",
    "bio": "https://ollama.com",
-   "followers": 184868,
-   "following": 328,
-   "tweets_count": 8826,
+   "followers": 184867,
+   "following": 332,
+   "tweets_count": 8827,
    "joined": "Mon Aug 07 04:42:08 +0000 2023",
    "location": "California, USA",
    "url": "https://x.com/ollama",
@@ -894,8 +864,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "https://llama.com"
+   "error": ""
   },
   {
    "handle": "alexalbert__",
@@ -909,8 +878,8 @@
    "avatar": "https://pbs.twimg.com/profile_images/1856486626072915968/JEQpB9CW_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/1380719534970040322/1723397536",
    "bio": "Research @AnthropicAI. Opinions are my own!",
-   "followers": 152246,
-   "following": 714,
+   "followers": 152263,
+   "following": 713,
    "tweets_count": 2312,
    "joined": "Sat Apr 10 03:09:58 +0000 2021",
    "location": "San Francisco",
@@ -920,8 +889,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "研究@AnthropicAI。意见是我自己的！"
+   "error": ""
   },
   {
    "handle": "MiniMax_AI",
@@ -936,7 +904,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/1875100548535574529/VxHk9HyU_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/1875078099538423808/1735888954",
    "bio": "Code: @MiniMaxAgent MiniMax Design: @Hailuo_AI API: http://platform.minimax.io Token Plan: https://platform.minimax.io/subscribe/token-plan",
-   "followers": 123550,
+   "followers": 123587,
    "following": 994,
    "tweets_count": 1990,
    "joined": "Fri Jan 03 07:14:02 +0000 2025",
@@ -947,8 +915,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "代码：@MiniMaxAgent MiniMax 设计：@Hailuo_AI API：http://platform.minimax.io Token计划：https://platform.minimax.io/subscribe/token-plan"
+   "error": ""
   },
   {
    "handle": "arthurmensch",
@@ -963,7 +930,7 @@
    "avatar": "https://pbs.twimg.com/profile_images/1887904839931248640/2_rjHToC_200x200.jpg",
    "banner": "https://pbs.twimg.com/profile_banners/51091819/1738946590",
    "bio": "Co-founder and CEO @MistralAI",
-   "followers": 88577,
+   "followers": 88589,
    "following": 855,
    "tweets_count": 460,
    "joined": "Fri Jun 26 15:08:03 +0000 2009",
@@ -974,8 +941,7 @@
    "tweets": [],
    "tweets_source": "",
    "note": "srv: HTTP 429",
-   "error": "",
-   "bio_zh": "联合创始人兼首席执行官@MistralAI"
+   "error": ""
   }
  ]
 }

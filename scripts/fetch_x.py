@@ -13,7 +13,7 @@
 
 每条人物还带 keywords，供页面把 ai_news 里提到该人物的报道关联出来。
 """
-import json, os, re, ssl, html, datetime, urllib.request, urllib.error
+import json, os, re, ssl, html, time, datetime, urllib.request, urllib.error
 import concurrent.futures as cf
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -63,6 +63,22 @@ LEADERS = [
     ("ollama",         "Ollama",            "Ollama 官方账号",              ["Ollama"], "org"),
     ("Cursor_ai",      "Cursor",            "Cursor 官方账号",              ["Cursor", "AI 编辑器"], "org"),
 ]
+
+
+def load_previous():
+    """读取上一次抓取结果：本次某个账号失败时，沿用它上次的资料，避免数据被清零。"""
+    if not os.path.exists(OUT):
+        return {}
+    try:
+        d = json.load(open(OUT, encoding="utf-8"))
+        return {r.get("handle"): r for r in d.get("leaders", []) if r.get("handle")}
+    except Exception:
+        return {}
+
+
+PREV = load_previous()
+PREV_FIELDS = ("name", "avatar", "banner", "bio", "followers", "following",
+               "tweets_count", "joined", "location", "url", "website")
 
 
 def fetch(url, timeout=20, headers=None):
@@ -293,12 +309,26 @@ def collect(leader):
     handle, name, role, keywords, kind = leader
     row = {"handle": handle, "name": name, "role": role, "keywords": keywords, "kind": kind}
     err = ""
-    try:
-        row.update(get_profile(handle))
-        row["profile_ok"] = True
-    except Exception as e:  # noqa: BLE001
-        row["profile_ok"] = False
-        err = f"资料抓取失败: {type(e).__name__}"
+    # 资料接口在并发时容易限流：重试 3 次，间隔递增
+    for attempt in range(3):
+        try:
+            row.update(get_profile(handle))
+            row["profile_ok"] = True
+            err = ""
+            break
+        except Exception as e:  # noqa: BLE001
+            err = f"资料抓取失败: {type(e).__name__}"
+            if attempt < 2:
+                time.sleep(1.5 * (attempt + 1))
+    if not row.get("profile_ok"):
+        prev = PREV.get(handle)
+        if prev and prev.get("profile_ok"):
+            for k in PREV_FIELDS:
+                if prev.get(k):
+                    row[k] = prev[k]
+            row["profile_ok"] = True
+            row["stale_profile"] = True
+            err = "本次抓取失败，沿用上次资料"
     tweets, why = try_timeline(handle)
     row["tweets"] = tweets or []
     row["tweets_source"] = "snapshot" if tweets else ""
@@ -310,7 +340,7 @@ def collect(leader):
 def main():
     print(f"抓取 {len(LEADERS)} 位 X 领军人物的公开资料…")
     rows = []
-    with cf.ThreadPoolExecutor(max_workers=8) as ex:
+    with cf.ThreadPoolExecutor(max_workers=4) as ex:
         for row in ex.map(collect, LEADERS):
             rows.append(row)
             flag = "OK" if row.get("profile_ok") else "--"
@@ -319,6 +349,7 @@ def main():
                   + (f"  ({row['note'][:60]})" if not n and row.get("note") else ""))
 
     ok = sum(1 for r in rows if r.get("profile_ok"))
+    stale = sum(1 for r in rows if r.get("stale_profile"))
     snaps = sum(1 for r in rows if r["tweets"])
     persons = sum(1 for r in rows if r.get("kind") == "person")
     orgs = sum(1 for r in rows if r.get("kind") == "org")
@@ -326,6 +357,7 @@ def main():
         "generated_at": datetime.datetime.now(datetime.timezone.utc).isoformat().replace("+00:00", "Z"),
         "count": len(rows),
         "profile_ok": ok,
+        "stale_profiles": stale,
         "with_tweets": snaps,
         "persons": persons,
         "orgs": orgs,
@@ -334,7 +366,7 @@ def main():
         "leaders": sorted(rows, key=lambda r: -r.get("followers", 0)),
     }
     json.dump(payload, open(OUT, "w"), ensure_ascii=False, indent=1)
-    print(f"\n完成：{ok}/{len(rows)} 个账号资料可用（人物 {persons} / 机构 {orgs}），{snaps} 位含推文快照 -> {OUT}")
+    print(f"\n完成：{ok}/{len(rows)} 个账号资料可用（其中 {stale} 个沿用上次），人物 {persons} / 机构 {orgs}，{snaps} 位含推文快照 -> {OUT}")
     if snaps == 0:
         print("  ⚠️ 未取到推文正文（本机 IP 被 X 限流）：页面会提供“载入官方时间线”与“打开主页”入口。")
 

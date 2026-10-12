@@ -252,8 +252,11 @@ if (process.env.SMOKE_DEBUG) {
       'UI=', shownCount(), 'harness=', expected({ window: '7d' }),
       'appOnly=', appList.filter((n) => !hs.has(n)), 'harnessOnly=', [...hs].filter((n) => !appList.includes(n)));
   }
-check('近 7 天时间窗生效', shownCount() === expected({ window: '7d' }), `UI=${shownCount()} 复算=${expected({ window: '7d' })}`);
-check('近 7 天项目均带 NEW 徽标', grid.children.every((c) => /NEW/.test(c.innerHTML)));
+const exp7 = expected({ window: '7d' });
+check('近 7 天时间窗生效', shownCount() === exp7, `UI=${shownCount()} 复算=${exp7}`);
+check(exp7 > 0 ? '近 7 天项目均带 NEW 徽标' : '近 7 天无项目（数据里为空，跳过徽标检查）',
+  exp7 === 0 || grid.children.every((c) => /NEW/.test(c.innerHTML)),
+  exp7 === 0 ? '该时间窗内没有项目' : `${grid.children.length} 张卡片全部命中`);
 click(get('#windowChips'), { target: { closest: () => chips[0] } });
 get('#sortSel').listeners.change[0]({ target: { value: 'forks' } });
 check('按 Fork 排序切换生效', get('#sortSel').value === 'forks' && shownCount() === expected());

@@ -74,7 +74,9 @@ esac
 EOS
   chmod +x "$ASKPASS"
   echo "正在推送代码…"
-  GH_TOKEN="$TOKEN" GIT_ASKPASS="$ASKPASS" GIT_TERMINAL_PROMPT=0 git push -u origin HEAD
+  # HTTP/1.1 + 大 postBuffer：部分网络环境下 HTTP/2 分块上传会被代理拒绝（400）
+  GH_TOKEN="$TOKEN" GIT_ASKPASS="$ASKPASS" GIT_TERMINAL_PROMPT=0 \
+    git -c http.version=HTTP/1.1 -c http.postBuffer=524288000 push -u origin HEAD
   RC=$?
   rm -f "$ASKPASS"
   [ "$RC" -ne 0 ] && { echo "❌ 推送失败（退出码 ${RC}）"; exit 1; }
